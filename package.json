@@ -1,0 +1,18 @@
+{
+	"name": "managment_dep",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"api:dev": "cd api && nodemon index.js",
+		"client:dev": "cd client && npm start",
+		"admin": "cd admin && npm start",
+		"start": "node index.js",
+		"dev": "concurrently -n'api,client' -c'green,blue' \"npm run api:dev\" \"npm run client:dev\""
+	},
+	"author": "med ali",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^7.1.0"
+	}
+}

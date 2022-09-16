@@ -1,0 +1,134 @@
+.note {
+	flex: 4;
+	padding: 20px;
+}
+
+.noteTitleContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.noteAddButton {
+	width: 80px;
+	border: none;
+	padding: 5px;
+	background-color: teal;
+	color: white;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.noteTop {
+	display: flex;
+	margin-top: 20px;
+}
+
+.noteTopLeft {
+	width: 200px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.noteTopRight {
+	flex: 2;
+	padding: 20px;
+	margin: 20px;
+	-webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.noteInfoImg {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.noteInfoTop {
+	display: flex;
+	align-items: center;
+}
+
+.noteName {
+	font-weight: 600;
+}
+
+.noteInfoBottom {
+	margin-top: 10px;
+}
+
+.noteInfoKey {
+	margin-right: 10px;
+}
+.noteInfoValue {
+	font-weight: 300;
+}
+
+.noteBottom {
+	padding: 20px;
+	margin: 20px;
+	-webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.noteForm {
+	display: flex;
+	justify-content: space-between;
+}
+
+.noteFormLeft {
+	display: flex;
+	flex-direction: column;
+}
+
+.noteFormLeft > label {
+	margin-bottom: 10px;
+	color: gray;
+}
+
+.noteFormLeft > input {
+	margin-bottom: 10px;
+	border: none;
+	padding: 5px;
+	border-bottom: 1px solid gray;
+}
+
+.noteFormLeft > select {
+	margin-bottom: 10px;
+	padding: 5px 10px;
+}
+
+.noteUploadImg {
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	object-fit: cover;
+	margin-right: 20px;
+}
+
+.noteFormRight {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.noteUpload {
+	display: flex;
+	align-items: center;
+}
+
+.noteButton {
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: darkblue;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+    margin-top: 100px;
+}

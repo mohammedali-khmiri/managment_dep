@@ -1,0 +1,42 @@
+.newNote {
+	flex: 4;
+}
+
+.addNoteForm {
+	margin-top: 10px;
+}
+
+.addNoteItem {
+	flex: 2;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.addNoteItem > label {
+	color: gray;
+	font-weight: 600;
+	margin: 10px 0;
+}
+
+.addNoteItem > input {
+	padding: 10px;
+}
+
+.addNoteItem > select {
+	padding: 10px;
+}
+
+.addNoteButton {
+	margin-top: 10px;
+	margin-left: 50px;
+	padding: 10px 50px;
+	border: none;
+	border-radius: 10px;
+	background-color: darkblue;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	
+}

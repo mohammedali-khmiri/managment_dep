@@ -1,0 +1,262 @@
+.rightbar {
+	flex: 3.5;
+}
+
+.rightbarWrapper {
+	padding: 20px 20px 0 0;
+}
+
+.birthdayContainer {
+	display: flex;
+	align-items: center;
+}
+
+.birthdayImg {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+.birthdayText {
+	font-weight: 300;
+	font-size: 15px;
+}
+
+.rightbarAd {
+	width: 100%;
+	border-radius: 10px;
+	margin: 30px 0;
+}
+
+.rightbarTitle {
+	margin-bottom: 20px;
+}
+
+.rightbarFriendList {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.rightbarTitle {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.rightbarInfo {
+	margin-bottom: 30px;
+}
+
+.rightbarInfoItem {
+	margin-bottom: 10px;
+}
+
+.rightbarInfoKey {
+	font-weight: 500;
+	margin-right: 15px;
+	color: #555;
+}
+
+.rightbarInfoValue {
+	font-weight: 300;
+}
+
+.rightbarFollowings {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.rightbarFollowing {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.rightbarFollowingImg {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.newProduct {
+	flex: 4;
+}
+
+.addProductForm {
+	margin-top: 10px;
+}
+
+.addProductItem {
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.addProductItem > label {
+	color: gray;
+	font-weight: 600;
+	margin: 10px 0;
+}
+
+.addProductItem > input {
+	padding: 10px;
+}
+
+.addProductButton {
+	margin-top: 10px;
+	padding: 7px 10px;
+	border: none;
+	border-radius: 10px;
+	background-color: darkblue;
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.product {
+	flex: 4;
+	padding: 20px;
+}
+
+.productTitleContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.productAddButton {
+	width: 80px;
+	border: none;
+	padding: 5px;
+	background-color: teal;
+	color: white;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.productTop {
+	display: flex;
+	margin-top: 20px;
+}
+
+.productTopLeft {
+	width: 200px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.productTopRight {
+	flex: 2;
+	padding: 20px;
+	margin: 20px;
+	-webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.productInfoImg {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.productInfoTop {
+	display: flex;
+	align-items: center;
+}
+
+.productName {
+	font-weight: 600;
+}
+
+.productInfoBottom {
+	margin-top: 10px;
+}
+
+.productInfoItem {
+	width: 150px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.productInfoValue {
+	font-weight: 300;
+}
+
+.productBottom {
+	width: 50%;
+	padding: 20px;
+	margin: auto;
+	-webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.productForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.productFormLeft {
+	display: flex;
+	flex-direction: column;
+}
+
+.productFormLeft > label {
+	margin-bottom: 10px;
+	color: gray;
+}
+
+.productFormLeft > input {
+	margin-bottom: 10px;
+	border: none;
+	padding: 5px;
+	border-bottom: 1px solid gray;
+	width: 80%;
+	outline: none;
+}
+
+.productFormLeft > select {
+	margin-bottom: 10px;
+}
+
+.productUploadImg {
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+	object-fit: cover;
+	margin-right: 20px;
+}
+
+.productFormRight {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.productUpload {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	margin-right: 100px;
+}
+
+.productButton {
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: rgb(0, 88, 139);
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	width: 50%;
+	margin: auto;
+}
