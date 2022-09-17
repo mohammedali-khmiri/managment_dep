@@ -7,6 +7,7 @@ import {
 	Switch,
 	Route,
 	Redirect,
+	useHistory,
 } from "react-router-dom";
 import UserList from "./pages/userList/UserList";
 import User from "./pages/user/User";
@@ -23,18 +24,31 @@ import Note from "./pages/note/Note";
 import NewNote from "./pages/newNote/NewNote";
 import NotFound from "./pages/notfound/NotFound";
 import { useSelector } from "react-redux";
+import Loading from "./pages/loading/Loading";
 
 function App() {
-	const admin = useSelector((state) => state.user.currentUser);
+	// const admin = useSelector((state) => state.user.currentUser);
+	const currUser = useSelector((state) => state.user.currentUser);
+	const history = useHistory();
 
+	// if (!currUser.isAdmin) {
+	// 	history.push("/login");
+	// }else{
+	//     history.push("/");
+	// }
 	return (
 		<Router>
 			<Switch>
-				<Route path="/login">{admin ? <Redirect to="/" /> : <Login />}</Route>
-
-				{admin ? (
+				<Route path="/login">
+					{currUser ? <Redirect to="/loading" /> : <Login />}
+				</Route>
+				<Route path="/loading">
+					<Loading />
+				</Route>
+				{currUser ? (
 					<>
 						<Topbar />
+
 						<div className="container">
 							<Sidebar />
 							<Route exact path="/">
@@ -82,7 +96,7 @@ function App() {
 					</>
 				) : (
 					<>
-						<Redirect to="/notfound" />
+						<Redirect to="/login" />
 						<Route path="/notfound">
 							<NotFound />
 						</Route>

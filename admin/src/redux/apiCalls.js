@@ -42,13 +42,15 @@ import {
 	addNoteStart,
 	addNoteSuccess,
 } from "./noteRedux";
+import { setAuthToken } from "../utils/setAuthToken";
 
 //LOGIN
 export const login = async (dispatch, user) => {
 	dispatch(loginStart());
 	try {
-		const res = await publicRequest.post("/auth/login", user);
+		const res = await userRequest.post("/auth/login", user);
 		dispatch(loginSuccess(res.data));
+		// setAuthToken(res.data.token);
 	} catch (err) {
 		dispatch(loginFailure());
 	}
@@ -130,7 +132,6 @@ export const updateStudent = async (id, student, dispatch) => {
 		dispatch(updateStudentFailure());
 	}
 };
-
 
 //CREATE STUDENT
 export const addStudent = async (student, dispatch) => {

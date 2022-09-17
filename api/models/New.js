@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const NewSchema = new mongoose.Schema(
 	{
-	
 		title: {
 			type: String,
 		},
