@@ -58,7 +58,6 @@ export default function Topbar() {
 					style={{
 						fontSize: 20,
 						color: "white",
-						backgroundColor: "red",
 						padding: " 5px 10px",
 						borderRadius: 10,
 					}}

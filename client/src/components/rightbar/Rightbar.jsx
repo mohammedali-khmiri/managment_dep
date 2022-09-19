@@ -2,6 +2,10 @@ import "./rightbar.css";
 import { Users } from "../../dummyData";
 import { useSelector } from "react-redux";
 import { Publish } from "@material-ui/icons";
+import axios from "axios";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+
 
 export default function Rightbar() {
 	const userS = useSelector((state) => state.student.currentUser);
@@ -11,11 +15,34 @@ export default function Rightbar() {
 	} else {
 		var currUser = userT;
 	}
+
 	const HomeRightbar = () => {
+		const [inputs, setInputs] = useState({});
+		const history = useHistory();
+		const [file, setFile] = useState(null);
+
+		const handleChange = (e) => {
+			setInputs((prev) => {
+				return { ...prev, [e.target.name]: e.target.value };
+			});
+		};
+
+		const handleClick = (e) => {
+			e.preventDefault();
+
+			// const student = { ...inputs };
+
+			// const updateNew = async (student) => {
+			// 	try {
+			// 		const res = await axios.post(`http://localhost:4000/api/news/addNew`);
+			// 		setData(res.data);
+			// 	} catch (err) {}
+			// };
+		};
 		return (
 			<>
 				<div className="newProduct">
-					<h1 className="addProductTitle">New advertisement</h1>
+					<h1 className="addProductTitle">Nouvelle actualité</h1>
 					<form className="addProductForm">
 						<div className="addProductItem">
 							<label>Image</label>
@@ -25,7 +52,7 @@ export default function Rightbar() {
 							<input
 								type="file"
 								id="file"
-								// onChange={(e) => setFile(e.target.files[0])}
+								onChange={(e) => setFile(e.target.files[0])}
 							/>
 						</div>
 						<div className="addProductItem">
@@ -34,7 +61,7 @@ export default function Rightbar() {
 								name="title"
 								type="text"
 								placeholder="Title."
-								// onChange={handleChange}
+								onChange={handleChange}
 							/>
 							<div className="addProductItem">
 								<label>Description</label>
@@ -47,7 +74,9 @@ export default function Rightbar() {
 							</div>
 						</div>
 
-						<button className="addProductButton">Create</button>
+						<button className="addProductButton" onClick={handleClick}>
+							Create
+						</button>
 					</form>
 				</div>
 			</>
@@ -131,7 +160,7 @@ export default function Rightbar() {
 						<ProfileRightbar /> <HomeRightbar />
 					</>
 				)}
-				{userS ? <ProfileRightbar /> : <HomeRightbar />}
+				{userS && <ProfileRightbar />}
 			</div>
 		</div>
 	);

@@ -90,7 +90,14 @@ const Right = styled.div`
 	align-items: center;
 	justify-content: flex-end;
 `;
-
+const SubItemContainer = styled.div`
+	position: absolute;
+	background-color: white;
+	display: none;
+	top: 100%;
+	width: 200px;
+	transition: all 0.5s ease;
+`;
 const MenuItem = styled.div`
 	font-weight: 600;
 	font-size: 14px;
@@ -99,9 +106,28 @@ const MenuItem = styled.div`
 	cursor: pointer;
 	margin-left: 30px;
 	${mobile({ fontSize: "12px", marginLeft: "10px" })}
-	:hover {
+	&:hover {
 		background-color: rgba(0, 0, 0, 0.1);
 		color: rgba(0, 0, 0, 0.8);
+	}
+	&:hover ${SubItemContainer} {
+		display: block;
+	}
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+`;
+
+const MenuSubItem = styled.div`
+	font-weight: 600;
+	font-size: 14px;
+	padding: 10px;
+	cursor: pointer;
+	color: black;
+	&:hover {
+		color: rgba(0, 0, 0, 0.5);
 	}
 `;
 
@@ -134,7 +160,24 @@ const Navbar = () => {
 					<MenuItem>ACCUEIL</MenuItem>
 					<MenuItem>PRÉSENTATION</MenuItem>
 					<MenuItem>FORMATIONS</MenuItem>
-					<MenuItem>ETUDIANTS</MenuItem>
+					{userS && (
+						<MenuItem>
+							ETUDIANTS
+							<SubItemContainer>
+								<MenuSubItem>DOCUMENTS DE SCOLARITÉ</MenuSubItem>
+								<Link
+									to="/note"
+									style={{
+										textDecoration: "none",
+										color: "black",
+									}}
+								>
+									<MenuSubItem>NOS NOTE</MenuSubItem>
+								</Link>
+								<MenuSubItem>ACTIVITÉS DES CLUBS </MenuSubItem>
+							</SubItemContainer>
+						</MenuItem>
+					)}
 					<MenuItem>PARTENARIATS</MenuItem>
 					<Link
 						to="/teachers"
@@ -147,12 +190,13 @@ const Navbar = () => {
 					</Link>
 					{userT && (
 						<Link
+						to="/actuality"
 							style={{
 								textDecoration: "none",
 								color: "black",
 							}}
 						>
-							<MenuItem>Add new</MenuItem>
+							<MenuItem>ACTUALITE</MenuItem>
 						</Link>
 					)}
 

@@ -15,6 +15,7 @@ import { useSelector } from "react-redux";
 import TeacherRegister from "./pages/TeacherRegister";
 import TeacherLogin from "./pages/TeacherLogin";
 import Profile from "./pages/profile/Profile";
+import Note from "./pages/note/Note";
 
 const App = () => {
 	const userS = useSelector((state) => state.student.currentUser);
@@ -40,6 +41,9 @@ const App = () => {
 				</Route>
 				<Route path="/teacher/:id">
 					<Teacher />
+				</Route>
+				<Route path="/note">
+					<Note />
 				</Route>
 				<Route path="/studentLogin">
 					{userS || userT ? <Redirect to="/" /> : <StudentLogin />}

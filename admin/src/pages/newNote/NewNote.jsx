@@ -42,6 +42,13 @@ export default function NewNote() {
 						placeholder="Prenom Etudiant..."
 						onChange={handleChange}
 					/>
+					<label>N° de carte d'identité</label>
+					<input
+						name="cinStud"
+						type="number"
+						placeholder="N° CIN "
+						onChange={handleChange}
+					/>
 				</div>
 				<div className="addNoteItem">
 					<label>Date de Sotenance</label>

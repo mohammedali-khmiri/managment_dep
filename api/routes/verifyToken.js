@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 
 //if user authenticated
 const verifyToken = (req, res, next) => {
-	const authHeader = req.header("verified_token");
+	const authHeader = req.headers.token;
 	if (authHeader) {
 		const token = authHeader;
 		jwt.verify(token, process.env.JWT_SEC, (err, user) => {

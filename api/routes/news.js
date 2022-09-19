@@ -7,7 +7,7 @@ const {
 } = require("./verifyToken");
 
 //create news
-router.post("/", verifyTokenAndAdmin, async (req, res) => {
+router.post("/addNew", async (req, res) => {
 	const newNews = new New(req.body);
 	try {
 		const savedNew = await newNews.save();

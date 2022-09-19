@@ -60,7 +60,7 @@ const Categories = () => {
 		<Container>
 			<ItemCategory>
 				<Link
-					to="/studentRegister"
+					to="/studentLogin"
 					style={{
 						textDecoration: "none",
 						color: "black",
@@ -77,7 +77,7 @@ const Categories = () => {
 			</ItemCategory>
 			<ItemCategory>
 				<Link
-					to="/teacherRegister"
+					to="/teacherLogin"
 					style={{
 						textDecoration: "none",
 						color: "black",

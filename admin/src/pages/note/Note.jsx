@@ -104,6 +104,7 @@ export default function Note() {
 							placeholder={note.lnameStud}
 							onChange={handleChange}
 						/>
+						
 						<label>Date de Sotenance</label>
 						<input
 							name="dateSou"

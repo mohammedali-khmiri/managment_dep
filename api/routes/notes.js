@@ -84,14 +84,19 @@ router.get("/:userId", verifyTokenAndAuthorization, async (req, res) => {
 router.get("/", async (req, res) => {
 	const qNew = req.query.new;
 	const qDateSou = req.query.dateSou;
+	const qCin = req.query.cinStud;
 	const qTypeStage = req.query.typeStage;
 	try {
 		let notes;
 		if (qNew) {
-			notes = await Note.find().sort({ createdAt: -1 }).limit(5);
+			notes = await Note.find().sort({ createdAt: -1 }).limit(2);
 		} else if (qTypeStage) {
 			notes = await Note.find({
 				typeStage: qTypeStage,
+			});
+		} else if (qCin) {
+			notes = await Note.find({
+				cinStud: qCin,
 			});
 		} else if (qDateSou) {
 			notes = await Note.find({

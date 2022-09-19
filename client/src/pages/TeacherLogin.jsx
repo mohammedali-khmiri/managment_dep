@@ -3,7 +3,7 @@ import { useState } from "react";
 import { loginTeacher } from "../redux/apiCalls";
 import { mobile } from "../responsive";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 const Container = styled.div`
 	width: 100vw;
@@ -34,8 +34,7 @@ const Nav = styled.div`
 const Wrapper = styled.div`
 	width: 25%;
 	padding: 20px;
-	background-color: 	rgba(255, 255, 255, 0.6)
-	;
+	background-color: rgba(255, 255, 255, 0.6);
 	${mobile({ width: "75%" })}
 `;
 
@@ -74,12 +73,12 @@ const Button = styled.button`
 	}
 `;
 
-const Link = styled.a`
-	margin: 5px 0px;
-	font-size: 12px;
-	text-decoration: underline;
-	cursor: pointer;
-`;
+// const Link = styled.a`
+// 	margin: 5px 0px;
+// 	font-size: 12px;
+// 	text-decoration: underline;
+// 	cursor: pointer;
+// `;
 
 const MenuItem = styled.div`
 	font-weight: 600;
@@ -105,8 +104,30 @@ const TeacherLogin = () => {
 		<Container>
 			<Nav>
 				<MenuItem>Espace Enseignant</MenuItem>
-				<MenuItem>Accueil</MenuItem>
-				<MenuItem>Contact</MenuItem>
+				<Link
+					to="/"
+					style={{
+						margin: "5 0",
+						fontSize: 12,
+						textDecoration: "none",
+						cursor: "pointer",
+						color: "black",
+					}}
+				>
+					<MenuItem>Accueil</MenuItem>
+				</Link>
+				<Link
+					to="/contact"
+					style={{
+						margin: "5 0",
+						fontSize: 12,
+						textDecoration: "none",
+						cursor: "pointer",
+						color: "black",
+					}}
+				>
+					<MenuItem>Contact</MenuItem>
+				</Link>
 			</Nav>
 			<Wrapper>
 				<Title>Sign In</Title>
@@ -124,8 +145,30 @@ const TeacherLogin = () => {
 						LOGIN
 					</Button>
 					{error && <Error>Something went wrong...</Error>}
-					<Link to="/studentRegister">DO NOT YOU REMEMBER THE PASSWORD?</Link>
-					<Link to="/studentRegister">CREATE A NEW ACCOUNT</Link>
+					<Link
+						to=""
+						style={{
+							margin: "5 0",
+							fontSize: 15,
+							textDecoration: "underline",
+							cursor: "pointer",
+							color: "black",
+						}}
+					>
+						DO NOT YOU REMEMBER THE PASSWORD?
+					</Link>
+					<Link
+						to="/teacherRegister"
+						style={{
+							margin: "5 0",
+							fontSize: 15,
+							textDecoration: "underline",
+							cursor: "pointer",
+							color: "black",
+						}}
+					>
+						CREATE A NEW ACCOUNT
+					</Link>
 				</Form>
 			</Wrapper>
 		</Container>

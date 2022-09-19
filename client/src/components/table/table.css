@@ -1,0 +1,34 @@
+table {
+	width: 90%;
+	margin: 50px auto;
+	border-spacing: 15px;
+	color: #444;
+	background-color: rgb(216, 211, 211);
+}
+
+tr {
+	margin-bottom: 20px;
+}
+
+th {
+	width: 250px;
+	text-align: left;
+	font-size: 20px;
+}
+
+td {
+	width: 250px;
+	font-size: 20px;
+}
+.widgetLgButton.pfe {
+	background-color: #e5faf2;
+	color: #3bb077;
+}
+.widgetLgButton.initiation {
+	background-color: #fffdf0;
+	color: #d4d950;
+}
+.widgetLgButton.perfectionnement {
+	background-color: #ebf1fe;
+	color: #2a7ade;
+}

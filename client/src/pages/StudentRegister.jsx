@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { registerStudent } from "../redux/apiCalls";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 import { useRef } from "react";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 const Container = styled.div`
 	width: 100vw;
@@ -79,6 +80,24 @@ const Nav = styled.div`
 	background-color: rgba(255, 255, 255, 0.5);
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+`;
+const NavItem = styled.div`
+	display: flex;
+	align-items: center;
+`;
+
+const NavLogin = styled.button`
+	display: flex;
+	align-items: center;
+
+	border: none;
+	border-radius: 10px;
+	padding: 10px 20px;
+	background-color: teal;
+	color: white;
+	cursor: pointer;
+	margin-right: 30px;
 `;
 
 const MenuItem = styled.div`
@@ -117,9 +136,50 @@ const Register = () => {
 	return (
 		<Container>
 			<Nav>
-				<MenuItem>Espace Etudiant</MenuItem>
-				<MenuItem>Accueil</MenuItem>
-				<MenuItem>Contact</MenuItem>
+				<NavItem>
+					<MenuItem>Espace Etudiant</MenuItem>
+					<Link
+						to="/"
+						style={{
+							margin: "5 0",
+							fontSize: 12,
+							textDecoration: "none",
+							cursor: "pointer",
+							color: "black",
+						}}
+					>
+						<MenuItem>Accueil</MenuItem>
+					</Link>
+					<Link
+						to="/contact"
+						style={{
+							margin: "5 0",
+							fontSize: 12,
+							textDecoration: "none",
+							cursor: "pointer",
+							color: "black",
+						}}
+					>
+						<MenuItem>Contact</MenuItem>
+					</Link>
+				</NavItem>
+				<Link
+					to="/studentLogin"
+					style={{
+						margin: "5 0",
+						textDecoration: "none",
+						cursor: "pointer",
+					}}
+				>
+					<NavLogin>
+						<ExitToAppIcon
+							style={{
+								marginRight: 10,
+							}}
+						/>
+						Connecter
+					</NavLogin>
+				</Link>
 			</Nav>
 			<Wrapper>
 				<Title>CREATE AN ACCOUNT</Title>

@@ -22,9 +22,9 @@ export default function NoteList() {
 
 	const columns = [
 		{
-			field: "num",
-			headerName: "N°",
-			width: 60,
+			field: "cinStud",
+			headerName: "N° CIN",
+			width: 100,
 		},
 		{
 			field: "student",

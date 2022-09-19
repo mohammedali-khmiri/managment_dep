@@ -6,8 +6,6 @@ import Rightbar from "../../components/rightbar/Rightbar";
 import { useSelector } from "react-redux";
 
 export default function Profile() {
-	
-
 	const userS = useSelector((state) => state.student.currentUser);
 	const userT = useSelector((state) => state.teacher.currentUser);
 	if (userS) {
